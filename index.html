@@ -9,64 +9,73 @@
 <body>
     <h1>What's On The Menu?</h1>
     <h2>What's On The Menu is your solution to the "What do I cook tonight?" dilemma. We are here to help you in three
-        different ways.</h2>
-    <ul>
-        <li>The "Recipe Search" search will bring up a small list of popular recipes based on the criteria you enter.</li>
-        <li>The "Clean Out the Pantry" search will provide you with 5 recipes that use the ingredients you specify,
-            great if you are looking for a way to use those tricky ingredients!</li>
-        <li>The "Anything At All" search will pull a completely random recipe up for you. Use this if you like to live
-            dangerously. For those who like to live dangerously.</li>
-    </ul>
+        different
+        ways.
+    </h2>
 
-    <h3>Simply select your preferred cuisine (or leave blank if you do not wish to specify a preference) and add any additional search terms you would like to filter by. Once you've done this, press one of the three search options below and enjoy! (If you want to Clean Out the Pantry, be sure to add your ingredients in the appropriate box as well before searching)</h3>
- 
+    <h3>Simply select your preferred cuisine (or leave blank if you do not wish to specify a preference) and add any
+        additional
+        search terms you would like to filter by. Once you've done this, press one of the three search options below
+        and enjoy!
+        (If you want to Clean Out the Pantry, be sure to add your ingredients in the appropriate box as well before
+        searching)</h3>
+    <span>Cuisine: </span>
+    <select>
+        <option></option>
+        <option value="african">African</option>
+        <option value="american">American</option>
+        <option value="british">British</option>
+        <option value="cajun">Cajun</option>
+        <option value="caribbean">Caribbean</option>
+        <option value="chinese">Chinese</option>
+        <option value="eastern european">Eastern European</option>
+        <option value="french">French</option>
+        <option value="german">German</option>
+        <option value="greek">Greek</option>
+        <option value="indian">Indian</option>
+        <option value="irish">Irish</option>
+        <option value="italian">Italian</option>
+        <option value="japanese">Japanese</option>
+        <option value="jewish">Jewish</option>
+        <option value="korean">Korean</option>
+        <option value="latin american">Latin American</option>
+        <option value="mexican">Mexican</option>
+        <option value="middle eastern">Middle Eastern</option>
+        <option value="nordic">Nordic</option>
+        <option value="southern">Southern</option>
+        <option value="spanish">Spanish</option>
+        <option value="thai">Thai</option>
+        <option value="vietnamese">Vietnamese</option>
+    </select>
+    Search terms: <input type='text' name='searchQuery'>
+    <input type='submit' value='Add to Search'>
 
-        <select>
-            <option></option>
-            <option value="african">African</option>
-            <option value="american">American</option>
-            <option value="british">British</option>
-            <option value="cajun">Cajun</option>
-            <option value="caribbean">Caribbean</option>
-            <option value="chinese">Chinese</option>
-            <option value="eastern european">Eastern European</option>
-            <option value="french">French</option>
-            <option value="german">German</option>
-            <option value="greek">Greek</option>
-            <option value="indian">Indian</option>
-            <option value="irish">Irish</option>
-            <option value="italian">Italian</option>
-            <option value="japanese">Japanese</option>
-            <option value="jewish">Jewish</option>
-            <option value="korean">Korean</option>
-            <option value="latin american">Latin American</option>
-            <option value="mexican">Mexican</option>
-            <option value="middle eastern">Middle Eastern</option>
-            <option value="nordic">Nordic</option>
-            <option value="southern">Southern</option>
-            <option value="spanish">Spanish</option>
-            <option value="thai">Thai</option>
-            <option value="vietnamese">Vietnamese</option>
-        </select><br>
-        Search term: <input type='text' name='searchQuery'>
-        <input type='submit' value='Add to Search'>
-        <div>Searchs terms: </div>
+    <section class='basicSearch'>
+        <h3>Recipe Search</h3>
+        <p>This search will bring up a small list of popular recipes based on the criteria you entered above.
+        </p>
+        <input type='submit' value='Show Me The Recipes!'>
+    </section>
 
-        <section class='basicSearch'>
-            <h3>Recipe Search</h3>
-            <p>This search will bring up a small list of popular recipes based on the criteria you entered above.</p>
+    <section class='cleanPantry'>
+        <h3>Clean Out the Pantry</h3>
+        <p>This search will provide you with 5 recipes based on the criteria you entered above, that also use the
+            ingredients you specify below, the more ingredients you enter, the more specialized the recipe will be (we
+            recommend 3-5). Great if you are looking for a way to use up those tricky ingredients.</p>
+        <input type='text' name='ingredient1'>
+        <input type='text' name='ingredient2'>
+        <input type='text' name='ingredient3'>
+        <input type='text' name='ingredient4'>
+        <input type='text' name='ingredient5'>
+        <input type='submit' value='Show Me The Recipes!'>
+    </section>
 
-        </section>
-
-        <section class='cleanPantry'>
-                <h3>Clean Out the Pantry</h3>
-                <p>This search will provide you with 5 recipes that use the ingredients you specify below, great if you are looking for a way to use those tricky ingredients!</p>
-            <input type='submit' value='Show Me The Recipes!'>
-        </section>
-
-        <section class='randomRecipe'>
-            
-        </section>
+    <section class='randomRecipe'>
+        <h3>Anything At All</h3>
+        <p>This search will pull a completely random recipe up for you. For those who like to live dangerously. If you
+            entered a cuisine above, you will still get a recipe from that cuisine.</p>
+        <input type='submit' value='Show Me The Recipe!'>
+    </section>
 
 
     <!--scripts-->
