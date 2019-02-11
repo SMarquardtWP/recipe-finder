@@ -21,7 +21,7 @@
         searching)</h3>
     <form class='recipeSearch'>
         <span>Cuisine: </span>
-        <select>
+        <select class=cuisineTypes>
             <option></option>
             <option value="african">African</option>
             <option value="american">American</option>
@@ -48,7 +48,7 @@
             <option value="thai">Thai</option>
             <option value="vietnamese">Vietnamese</option>
         </select>
-        Search terms: <input type='text' name='searchQuery'>
+        Search terms: <input type='text' name='searchQuery' class='queries' placeholder='e.g. burger, dessert'>
 
         <div class='container'>
             <section class='basicSearch'>
@@ -60,12 +60,7 @@
 
             <section class='cleanPantry'>
                 <h3>Clean Out the Pantry</h3>
-                <p>This search will provide you with 5 recipes based on the criteria you entered above, that also use
-                    the
-                    ingredients you specify below, the more ingredients you enter, the more specialized the recipe will
-                    be
-                    (we
-                    recommend 3-5). Great if you are looking for a way to use up those tricky ingredients.</p>
+                <p>This search will provide you with 5 recipes based on the criteria you entered above, that also use the ingredients you specify below, the more ingredients you enter, the more specialized the recipe will be (we recommend 3-5). Great if you are looking for a way to use up those tricky ingredients.</p>
                 <input type='text' name='ingredient1'>
                 <input type='text' name='ingredient2'>
                 <input type='text' name='ingredient3'>
@@ -76,24 +71,20 @@
 
             <section class='randomRecipe'>
                 <h3>Anything At All</h3>
-                <p>This search will pull a completely random recipe up for you. For those who like to live dangerously.
-                    If
-                    you
-                    entered a cuisine above, you will still get a recipe from that cuisine.</p>
+                <p>This search will pull a completely random recipe up for you. For those who like to live dangerously. If you entered a cuisine above, you will still get a recipe from that cuisine.</p>
                 <input type='submit' class='search3' value='Show Me The Recipe!'>
             </section>
         </div>
     </form>
 
-    <section class = 'recipeResults'>
-        <img src='dummy.jpg' alt='a dummy image'>
-        <a href='dummy.dmy'>dummy.dmy</a>
+    <section class='recipeResults'>
+
     </section>
 
     <!--scripts-->
-    <script src="scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
     <!--end scripts-->
 </body>
 
