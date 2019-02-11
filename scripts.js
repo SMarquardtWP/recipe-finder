@@ -29,10 +29,13 @@ function randomRecipe() {
 
 //accesses API to get information about different recipes based on advanced data received from user
 function advancedRecipes(cuisine, query, ingredients) {
+    console.log(cuisine);
+    console.log(query);
     console.log(ingredients);
-    fetch(`${BASE_URL}/searchComplex?query=${query}&cuisine=${cuisine}&includeIngredients=${ingredients}&ranking=1`, SETTINGS)
+    console.log(`${BASE_URL}/searchComplex?query=${query}&cuisine=${cuisine}&includeIngredients=${ingredients}&ranking=1&limitLicense=false`)
+/*    fetch(`${BASE_URL}/searchComplex?query=${query}&cuisine=${cuisine}&includeIngredients=${ingredients}&ranking=1&limitLicense=false`, SETTINGS)
         .then(response => response.json())
-        .then(responseJson => findRecipeByID(responseJson, displayRecipe));
+        .then(responseJson => findRecipeByID(responseJson, displayRecipe));*/
 }
 
 //accesses API to get information about different recipes based on basic data received from user
