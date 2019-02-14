@@ -13,7 +13,7 @@ function displayRecipe(jsonRecipe) {
     $('.recipeResults').append(`
     <h4>${jsonRecipe.title}</h4>
     <img src='${jsonRecipe.image}'>
-    <a href='${jsonRecipe.sourceUrl}'>${jsonRecipe.sourceUrl}</a><br>`);
+    <a href='${jsonRecipe.sourceUrl}' target="_blank">${jsonRecipe.sourceUrl}</a><br>`);
 }
 
 /*-----------------------------------------------------------------------*/

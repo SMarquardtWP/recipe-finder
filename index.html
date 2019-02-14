@@ -13,18 +13,12 @@
 
 <body>
     <header>
-    <h1>What's On The Menu?</h1>
-    <h2>What's On The Menu is your solution to the "What do I cook tonight?" dilemma. We are here to help you in three
-        different
-        ways.
-    </h2>
+        <h1>What's On The Menu?</h1>
+        <h2>What's On The Menu is your solution to the "What do I cook         tonight?" dilemma. We are here to help you in three different
+            ways.</h2>
 
-    <h3>Simply select your preferred cuisine (or leave blank if you do not wish to specify a preference) and add any
-        additional
-        search terms you would like to filter by. Once you've done this, press one of the three search options below
-        and enjoy!
-        (If you want to Clean Out the Pantry, be sure to add your ingredients in the appropriate box as well before
-        searching)</h3>
+        <h3>Simply select your preferred cuisine (or leave blank if you do     not wish to specify a preference) and add any additional
+            search terms you would like to filter by. Once you've done this, press one of the three search options below and enjoy!</h3>
     </header>
     <form class='recipeSearch'>
         <label>Cuisine:
@@ -55,13 +49,15 @@
                 <option value="thai">Thai</option>
                 <option value="vietnamese">Vietnamese</option>
             </select>
+        </label><br>
+
+        <label>Search terms: <input type='text' name='searchQuery' class='queries' placeholder='e.g. burger, dessert'>
         </label>
-        Search terms: <input type='text' name='searchQuery' class='queries' placeholder='e.g. burger, dessert'>
 
         <div class='container'>
             <section class='basicSearch'>
                 <h3>Recipe Search</h3>
-                <p>This search will bring up a small list of popular recipes based on the criteria you entered above.
+                <p>This search will bring up a list of 10 popular recipes based on the criteria you entered above.
                 </p>
                 <input type='submit' class='search1 searcher' value='Show Me The Recipes!'>
             </section>
@@ -69,7 +65,7 @@
             <section class='cleanPantry'>
                 <h3>Clean Out the Pantry</h3>
                 <p>This search will provide you with 5 recipes based on the criteria you entered above, that also use
-                    the ingredients you specify below, the more ingredients you enter, the more specialized the recipe
+                    the ingredients you specify below. The more ingredients you enter, the more specialized the recipe
                     will be (we recommend 3-5). Great if you are looking for a way to use up those tricky ingredients.</p>
                 <input type='text' name='ingredient1'>
                 <input type='text' name='ingredient2'>
@@ -78,6 +74,9 @@
                 <input type='text' name='ingredient5'>
                 <input type='text' name='ingredient6'><br>
                 <input type='submit' class='search2 searcher' value='Show Me The Recipes!'>
+                <div class='errorText'>
+                    Error Styling Sample;
+                </div> 
             </section>
 
             <section class='randomRecipe'>
@@ -86,22 +85,24 @@
                 <input type='submit' class='search3 searcher' value='Show Me The Recipe!'>
             </section>
         </div>
+
     </form>
 
     <section class='recipeResults'>
         <h4>Sample Recipe</h4>
-        <a href='https://placeholder.com'><img src='https://place-hold.it/300'></a><br>
-    
-        <h4>Sample Recipe</h4>
-        <a href='https://placeholder.com'><img src='https://place-hold.it/300'></a><br>
+        <a href='https://placeholder.com' target="_blank"><img src='https://place-hold.it/300'></a><br>
+        <a href='https://placeholder.com' target="_blank">dummy.website.com</a><br>
 
         <h4>Sample Recipe</h4>
-        <a href='https://placeholder.com'><img src='https://place-hold.it/300'></a><br>
+        <a href='https://placeholder.com' target="_blank"><img src='https://place-hold.it/300'></a><br>
+        <a href='https://placeholder.com' target="_blank">dummy.website.com</a><br>
+
+        <h4>Sample Recipe</h4>
+        <a href='https://placeholder.com' target="_blank"><img src='https://place-hold.it/300'></a><br>
+        <a href='https://placeholder.com' target="_blank">dummy.website.com</a><br>
     </section>
 
-    <section class='errorText'>
-        Error Styling Sample;
-    </section>
+
 
     <footer>This Page Created By: Seth Marquardt</footer>
 

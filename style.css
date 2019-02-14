@@ -1,49 +1,97 @@
 * {
     box-sizing: border-box;
     font-family: 'Abhaya Libre', Capriola, Comfortaa, serif;
+}
+
+header{
+    text-align:center;
+}
+
+form{
+    text-align:center;
+}
+
+form section{
+    display: inline-block;
+    border: 2px solid black;
+    width:90%;
+    vertical-align:top;
     text-align: center;
 }
 
 h1{
    font-family: Capriola;
-   text-align:center; 
 }
 
 h2{
     font-family: Comfortaa;
-    text-align:center;
 }
 
 section h3{
     font-family: Capriola;
+    font-size: 24px;
 }
 
-section{
-    display: inline-block;
-    border: 2px solid black;
-    width: 200px;
-    vertical-align:top;
+h4{
+    font-family: Comfortaa;
+    font-size: 20px;
 }
 
-section{
-    width:33%;
+p{
+    font-size: 20px;
+}
+
+label, select, .queries{
+    margin-bottom: 5px;
+    font-size:14px;
+    font-family: Comfortaa;
+    width:40%;
+    height:60px;
+}
+
+.queries{
+    font-size: 40px;
+    width:50%;
+}
+
+select{
+    -webkit-appearance: menulist-button;
+    height: 60px;
+    font-size:36px;
+}
+
+option{
+    font-size: 20px;
+    font-family: Comfortaa;
 }
 
 .recipeResults{
-    text-align: left;
+    margin-left: 5%;
 }
 
-.cleanPantry input{
+.recipeResults img{
+    background-size: cover;
+}
+
+.cleanPantry [type='text']{
     width:45%;
     margin:2%;
-    padding:3px;
+    height: 60px;
+    font-size: 45px;
 }
 
 .searcher{
-    height: 30px;
-    width: 50%;
+    font-family:'Abhaya Libre';
+    font-size:32px;
+    height: 50px;
+    width: 70%;
 }
 
 .errorText{
     color: red;
+}
+
+footer{
+    margin-left: 5px;
+    font-size: 12px;
 }
