@@ -4,9 +4,15 @@
 <head>
     <title>Recipe Finder</title>
     <link rel="stylesheet" href="style.css">
+    <!----Fonts---->
+    <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Capriola' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <!----End Fonts---->
 </head>
 
 <body>
+    <header>
     <h1>What's On The Menu?</h1>
     <h2>What's On The Menu is your solution to the "What do I cook tonight?" dilemma. We are here to help you in three
         different
@@ -19,35 +25,37 @@
         and enjoy!
         (If you want to Clean Out the Pantry, be sure to add your ingredients in the appropriate box as well before
         searching)</h3>
+    </header>
     <form class='recipeSearch'>
-        <span>Cuisine: </span>
-        <select class=cuisineTypes>
-            <option></option>
-            <option value="african">African</option>
-            <option value="american">American</option>
-            <option value="british">British</option>
-            <option value="cajun">Cajun</option>
-            <option value="caribbean">Caribbean</option>
-            <option value="chinese">Chinese</option>
-            <option value="eastern european">Eastern European</option>
-            <option value="french">French</option>
-            <option value="german">German</option>
-            <option value="greek">Greek</option>
-            <option value="indian">Indian</option>
-            <option value="irish">Irish</option>
-            <option value="italian">Italian</option>
-            <option value="japanese">Japanese</option>
-            <option value="jewish">Jewish</option>
-            <option value="korean">Korean</option>
-            <option value="latin american">Latin American</option>
-            <option value="mexican">Mexican</option>
-            <option value="middle eastern">Middle Eastern</option>
-            <option value="nordic">Nordic</option>
-            <option value="southern">Southern</option>
-            <option value="spanish">Spanish</option>
-            <option value="thai">Thai</option>
-            <option value="vietnamese">Vietnamese</option>
-        </select>
+        <label>Cuisine:
+            <select class='cuisineTypes'>
+                <option></option>
+                <option value="african">African</option>
+                <option value="american">American</option>
+                <option value="british">British</option>
+                <option value="cajun">Cajun</option>
+                <option value="caribbean">Caribbean</option>
+                <option value="chinese">Chinese</option>
+                <option value="eastern european">Eastern European</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+                <option value="greek">Greek</option>
+                <option value="indian">Indian</option>
+                <option value="irish">Irish</option>
+                <option value="italian">Italian</option>
+                <option value="japanese">Japanese</option>
+                <option value="jewish">Jewish</option>
+                <option value="korean">Korean</option>
+                <option value="latin american">Latin American</option>
+                <option value="mexican">Mexican</option>
+                <option value="middle eastern">Middle Eastern</option>
+                <option value="nordic">Nordic</option>
+                <option value="southern">Southern</option>
+                <option value="spanish">Spanish</option>
+                <option value="thai">Thai</option>
+                <option value="vietnamese">Vietnamese</option>
+            </select>
+        </label>
         Search terms: <input type='text' name='searchQuery' class='queries' placeholder='e.g. burger, dessert'>
 
         <div class='container'>
@@ -55,35 +63,51 @@
                 <h3>Recipe Search</h3>
                 <p>This search will bring up a small list of popular recipes based on the criteria you entered above.
                 </p>
-                <input type='submit' class='search1' value='Show Me The Recipes!'>
+                <input type='submit' class='search1 searcher' value='Show Me The Recipes!'>
             </section>
 
             <section class='cleanPantry'>
                 <h3>Clean Out the Pantry</h3>
-                <p>This search will provide you with 5 recipes based on the criteria you entered above, that also use the ingredients you specify below, the more ingredients you enter, the more specialized the recipe will be (we recommend 3-5). Great if you are looking for a way to use up those tricky ingredients.</p>
+                <p>This search will provide you with 5 recipes based on the criteria you entered above, that also use
+                    the ingredients you specify below, the more ingredients you enter, the more specialized the recipe
+                    will be (we recommend 3-5). Great if you are looking for a way to use up those tricky ingredients.</p>
                 <input type='text' name='ingredient1'>
                 <input type='text' name='ingredient2'>
                 <input type='text' name='ingredient3'>
                 <input type='text' name='ingredient4'>
                 <input type='text' name='ingredient5'>
-                <input type='submit' class='search2' value='Show Me The Recipes!'>
+                <input type='text' name='ingredient6'><br>
+                <input type='submit' class='search2 searcher' value='Show Me The Recipes!'>
             </section>
 
             <section class='randomRecipe'>
                 <h3>Anything At All</h3>
                 <p>This search will pull a completely random recipe up for you. For those who like to live dangerously.</p>
-                <input type='submit' class='search3' value='Show Me The Recipe!'>
+                <input type='submit' class='search3 searcher' value='Show Me The Recipe!'>
             </section>
         </div>
     </form>
 
     <section class='recipeResults'>
+        <h4>Sample Recipe</h4>
+        <a href='https://placeholder.com'><img src='https://place-hold.it/300'></a><br>
+    
+        <h4>Sample Recipe</h4>
+        <a href='https://placeholder.com'><img src='https://place-hold.it/300'></a><br>
 
+        <h4>Sample Recipe</h4>
+        <a href='https://placeholder.com'><img src='https://place-hold.it/300'></a><br>
     </section>
+
+    <section class='errorText'>
+        Error Styling Sample;
+    </section>
+
+    <footer>This Page Created By: Seth Marquardt</footer>
 
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
     <!--end scripts-->
 </body>

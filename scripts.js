@@ -23,28 +23,30 @@ function displayRecipe(jsonRecipe) {
 //accesses API to retrieve a single random recipe for user. Only filters by cuisine
 function randomRecipe() {
     fetch(`${BASE_URL}/random?number=1`, SETTINGS)
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        }
-        throw new Error(response.statusText);
-    })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error(response.statusText);
+        })
         .then(responseJson => displayRecipe(responseJson.recipes[0]));
 }
 
 //accesses API to get information about different recipes based on advanced data received from user
 function advancedRecipes(cuisine, query, ingredients) {
-    console.log(cuisine);
-    console.log(query);
-    console.log(ingredients);
+    if (ingredients == '')
+        $('.errorText').html('<p>Please input at least one ingredient</p>')
 
-    /*   if (ingredients == '')
-           $('.errorText').html('<p>Please input at least one ingredient</p>')
-   
-       else */
-    fetch(`${BASE_URL}/searchComplex?query=${query}&cuisine=${cuisine}&includeIngredients=${ingredients}&ranking=1&limitLicense=false`, SETTINGS)
-        .then(response => response.json())
-        .then(responseJson => findRecipeByID(responseJson, displayRecipe));
+    else {
+        fetch(`${BASE_URL}/searchComplex?query=${query}&cuisine=${cuisine}&includeIngredients=${ingredients}&ranking=1&limitLicense=false`, SETTINGS)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error(response.statusText);
+            })
+            .then(responseJson => findRecipeByID(responseJson, displayRecipe));
+    }
 }
 
 //accesses API to get information about different recipes based on basic data received from user
@@ -76,7 +78,7 @@ function findRecipeByID(responseJsonID, callback) {
 function formatIngredients() {
     let ingredientsList = '';
     let ingredient = '';
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
         ingredient = $('.cleanPantry').find('input').eq(i).val();
         if (ingredient != '') {
             ingredientsList += '%2c+' + ingredient;

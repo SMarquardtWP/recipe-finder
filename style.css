@@ -1,5 +1,21 @@
 * {
     box-sizing: border-box;
+    font-family: 'Abhaya Libre', Capriola, Comfortaa, serif;
+    text-align: center;
+}
+
+h1{
+   font-family: Capriola;
+   text-align:center; 
+}
+
+h2{
+    font-family: Comfortaa;
+    text-align:center;
+}
+
+section h3{
+    font-family: Capriola;
 }
 
 section{
@@ -7,5 +23,27 @@ section{
     border: 2px solid black;
     width: 200px;
     vertical-align:top;
-    text-align:center;
+}
+
+section{
+    width:33%;
+}
+
+.recipeResults{
+    text-align: left;
+}
+
+.cleanPantry input{
+    width:45%;
+    margin:2%;
+    padding:3px;
+}
+
+.searcher{
+    height: 30px;
+    width: 50%;
+}
+
+.errorText{
+    color: red;
 }
