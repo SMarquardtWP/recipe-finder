@@ -10,12 +10,14 @@ const BASE_URL = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/re
 //generates a list of all fetched recipes and displays them for the user
 function displayRecipe(jsonRecipe) {
     console.log(jsonRecipe);
-    $('.recipeResults').append(`
+    if (jsonRecipe.code != 404) {
+        $('.recipeResults').append(`
     <div class='recipe'>
         <h4>${jsonRecipe.title}</h4>
-        <img src='${jsonRecipe.image}'>
+        <img src='${jsonRecipe.image}'><br>
         <a href='${jsonRecipe.sourceUrl}' target="_blank">${jsonRecipe.sourceUrl}</a>
     </div>`);
+    }
 }
 
 /*-----------------------------------------------------------------------*/
@@ -31,7 +33,10 @@ function randomRecipe() {
             }
             throw new Error(response.statusText);
         })
-        .then(responseJson => displayRecipe(responseJson.recipes[0]));
+        .then(responseJson => displayRecipe(responseJson.recipes[0]))
+        .catch(err => {
+            $('.requestErrorMessage').text(`Sorry, something seems to have gone wrong: $err.message}`);
+        });
 }
 
 //accesses API to get information about different recipes based on advanced data received from user
@@ -47,7 +52,10 @@ function advancedRecipes(cuisine, query, ingredients) {
                 }
                 throw new Error(response.statusText);
             })
-            .then(responseJson => findRecipeByID(responseJson, displayRecipe));
+            .then(responseJson => findRecipeByID(responseJson, displayRecipe))
+            .catch(err => {
+                $('.requestErrorMessage').text(`Sorry, something seems to have gone wrong: $err.message}`);
+            });
     }
 }
 
@@ -60,15 +68,26 @@ function basicRecipes(cuisine, query) {
             }
             throw new Error(response.statusText);
         })
-        .then(responseJson => findRecipeByID(responseJson, displayRecipe));
+        .then(responseJson => findRecipeByID(responseJson, displayRecipe))
+        .catch(err => {
+            $('.requestErrorMessage').text(`Sorry, something seems to have gone wrong: $err.message}`);
+        });
 }
 
 //takes recipe ID found by either basicRecipes or advancedRecipes and looks up more detailed information, then calls for it to be displayed
 function findRecipeByID(responseJsonID, callback) {
     for (let i = 0; i < responseJsonID.results.length; i++) {
         fetch(`${BASE_URL}/${responseJsonID.results[i].id}/information`, SETTINGS)
-            .then(response => response.json())
-            .then(responseJson => callback(responseJson));
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error(response.statusText);
+            })
+            .then(responseJson => callback(responseJson))
+            .catch(err => {
+                $('..requestErrorMessage').text(`Sorry, something seems to have gone wrong: $err.message}`);
+            });
     }
 }
 
