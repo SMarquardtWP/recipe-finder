@@ -11,9 +11,11 @@ const BASE_URL = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/re
 function displayRecipe(jsonRecipe) {
     console.log(jsonRecipe);
     $('.recipeResults').append(`
-    <h4>${jsonRecipe.title}</h4>
-    <img src='${jsonRecipe.image}'>
-    <a href='${jsonRecipe.sourceUrl}' target="_blank">${jsonRecipe.sourceUrl}</a><br>`);
+    <div class='recipe'>
+        <h4>${jsonRecipe.title}</h4>
+        <img src='${jsonRecipe.image}'>
+        <a href='${jsonRecipe.sourceUrl}' target="_blank">${jsonRecipe.sourceUrl}</a>
+    </div>`);
 }
 
 /*-----------------------------------------------------------------------*/

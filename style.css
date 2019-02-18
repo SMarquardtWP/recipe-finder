@@ -3,20 +3,24 @@
     font-family: 'Abhaya Libre', Capriola, Comfortaa, serif;
 }
 
-header{
+body{
     text-align:center;
+    background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('https://i.pinimg.com/originals/a0/34/2c/a0342c71f4ec80138ea538452829f8a5.jpg'); 
 }
 
-form{
-    text-align:center;
-}
 
-form section{
+
+form .searchOption{
     display: inline-block;
     border: 2px solid black;
-    width:90%;
-    vertical-align:top;
-    text-align: center;
+    width: 90%;
+    padding:5px;
+}
+
+section{
+    background-color: rgb(251, 184, 172);
+    border-radius:10px;
+    box-shadow: 0px 5px 5px grey;
 }
 
 h1{
@@ -27,71 +31,87 @@ h2{
     font-family: Comfortaa;
 }
 
-section h3{
+h3{
     font-family: Capriola;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 h4{
     font-family: Comfortaa;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 p{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 label, select, .queries{
     margin-bottom: 5px;
-    font-size:14px;
+    font-size:16px;
     font-family: Comfortaa;
     width:40%;
-    height:60px;
+    height:26px;
 }
 
 .queries{
-    font-size: 40px;
+    font-size: 18px;
     width:50%;
 }
 
 select{
-    -webkit-appearance: menulist-button;
-    height: 60px;
-    font-size:36px;
+/*    -webkit-appearance: menulist-button; */
+    height: 26px;
+    font-size:16px;
 }
 
 option{
-    font-size: 20px;
+    font-size: 16px;
     font-family: Comfortaa;
 }
 
 .recipeResults{
-    margin-left: 5%;
+
+}
+
+.recipe{
+    border-top: 10px ridge red;
+    border-right: 10px groove red;
+    border-radius: 30px;
+    margin-top: 30px;
 }
 
 .recipeResults img{
     background-size: cover;
+    width: 90%;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius:10px;
 }
 
 .cleanPantry [type='text']{
     width:45%;
     margin:2%;
-    height: 60px;
-    font-size: 45px;
+    height: 30px;
+    font-size: 16px;
 }
 
 .searcher{
     font-family:'Abhaya Libre';
-    font-size:32px;
-    height: 50px;
+    font-size:20px;
+    height: 40px;
     width: 70%;
 }
 
 .errorText{
+    background-color:;
+    font-size: 20px;
     color: red;
+    margin: 10px;
+    text-shadow: 0 0 1px #3F0C02;
 }
 
 footer{
+    margin-top: 5px;
     margin-left: 5px;
     font-size: 12px;
 }

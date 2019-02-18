@@ -2,6 +2,8 @@
 <html lang='en'>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <title>Recipe Finder</title>
     <link rel="stylesheet" href="style.css">
     <!----Fonts---->
@@ -14,55 +16,60 @@
 <body>
     <header>
         <h1>What's On The Menu?</h1>
-        <h2>What's On The Menu is your solution to the "What do I cook         tonight?" dilemma. We are here to help you in three different
+        <h2>What's On The Menu is your solution to the "What do I cook tonight?" dilemma. We are here to help you in
+            three different
             ways.</h2>
-
-        <h3>Simply select your preferred cuisine (or leave blank if you do     not wish to specify a preference) and add any additional
-            search terms you would like to filter by. Once you've done this, press one of the three search options below and enjoy!</h3>
     </header>
-    <form class='recipeSearch'>
-        <label>Cuisine:
-            <select class='cuisineTypes'>
-                <option></option>
-                <option value="african">African</option>
-                <option value="american">American</option>
-                <option value="british">British</option>
-                <option value="cajun">Cajun</option>
-                <option value="caribbean">Caribbean</option>
-                <option value="chinese">Chinese</option>
-                <option value="eastern european">Eastern European</option>
-                <option value="french">French</option>
-                <option value="german">German</option>
-                <option value="greek">Greek</option>
-                <option value="indian">Indian</option>
-                <option value="irish">Irish</option>
-                <option value="italian">Italian</option>
-                <option value="japanese">Japanese</option>
-                <option value="jewish">Jewish</option>
-                <option value="korean">Korean</option>
-                <option value="latin american">Latin American</option>
-                <option value="mexican">Mexican</option>
-                <option value="middle eastern">Middle Eastern</option>
-                <option value="nordic">Nordic</option>
-                <option value="southern">Southern</option>
-                <option value="spanish">Spanish</option>
-                <option value="thai">Thai</option>
-                <option value="vietnamese">Vietnamese</option>
-            </select>
-        </label><br>
 
-        <label>Search terms: <input type='text' name='searchQuery' class='queries' placeholder='e.g. burger, dessert'>
-        </label>
 
-        <div class='container'>
-            <section class='basicSearch'>
+    <form>
+        <section class='generalQuery'>
+            <h3>Step 1: Enter your preferred cuisine and any terms you would like to search by, you can leave either
+                field blank if you wish. </h3>
+            <label>Cuisine:
+                <select class='cuisineTypes'>
+                    <option></option>
+                    <option value="african">African</option>
+                    <option value="american">American</option>
+                    <option value="british">British</option>
+                    <option value="cajun">Cajun</option>
+                    <option value="caribbean">Caribbean</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="eastern european">Eastern European</option>
+                    <option value="french">French</option>
+                    <option value="german">German</option>
+                    <option value="greek">Greek</option>
+                    <option value="indian">Indian</option>
+                    <option value="irish">Irish</option>
+                    <option value="italian">Italian</option>
+                    <option value="japanese">Japanese</option>
+                    <option value="jewish">Jewish</option>
+                    <option value="korean">Korean</option>
+                    <option value="latin american">Latin American</option>
+                    <option value="mexican">Mexican</option>
+                    <option value="middle eastern">Middle Eastern</option>
+                    <option value="nordic">Nordic</option>
+                    <option value="southern">Southern</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="thai">Thai</option>
+                    <option value="vietnamese">Vietnamese</option>
+                </select>
+            </label><br>
+
+            <label>Search terms: <input type='text' name='searchQuery' class='queries' placeholder='burger, dessert'>
+            </label>
+        </section>
+
+        <section>
+            <h3>Step 2: Select one of the three different search options below!</h3>
+            <div class='searchOption basicSearch'>
                 <h3>Recipe Search</h3>
                 <p>This search will bring up a list of 10 popular recipes based on the criteria you entered above.
                 </p>
                 <input type='submit' class='search1 searcher' value='Show Me The Recipes!'>
-            </section>
+            </div>
 
-            <section class='cleanPantry'>
+            <div class='searchOption cleanPantry'>
                 <h3>Clean Out the Pantry</h3>
                 <p>This search will provide you with 5 recipes based on the criteria you entered above, that also use
                     the ingredients you specify below. The more ingredients you enter, the more specialized the recipe
@@ -76,30 +83,36 @@
                 <input type='submit' class='search2 searcher' value='Show Me The Recipes!'>
                 <div class='errorText'>
                     Error Styling Sample;
-                </div> 
-            </section>
+                </div>
+            </div>
 
-            <section class='randomRecipe'>
+            <div class='searchOption randomRecipe'>
                 <h3>Anything At All</h3>
                 <p>This search will pull a completely random recipe up for you. For those who like to live dangerously.</p>
                 <input type='submit' class='search3 searcher' value='Show Me The Recipe!'>
-            </section>
-        </div>
-
+            </div>
+        </section>
     </form>
 
     <section class='recipeResults'>
-        <h4>Sample Recipe</h4>
-        <a href='https://placeholder.com' target="_blank"><img src='https://place-hold.it/300'></a><br>
-        <a href='https://placeholder.com' target="_blank">dummy.website.com</a><br>
+        <h3>Step 3: Browse your recipes!</h3>
+        <div class='recipe'>
+            <h4>Sample Recipe</h4>
+            <img src='https://place-hold.it/300'>
+            <a href='https://placeholder.com' target="_blank">'https://placeholder.com'</a>
+        </div>
 
-        <h4>Sample Recipe</h4>
-        <a href='https://placeholder.com' target="_blank"><img src='https://place-hold.it/300'></a><br>
-        <a href='https://placeholder.com' target="_blank">dummy.website.com</a><br>
+        <div class='recipe'>
+            <h4>Sample Recipe</h4>
+            <img src='https://place-hold.it/300'>
+            <a href='https://placeholder.com' target="_blank">'https://placeholder.com'</a>
+        </div>
 
-        <h4>Sample Recipe</h4>
-        <a href='https://placeholder.com' target="_blank"><img src='https://place-hold.it/300'></a><br>
-        <a href='https://placeholder.com' target="_blank">dummy.website.com</a><br>
+        <div class='recipe'>
+            <h4>Sample Recipe</h4>
+            <img src='https://place-hold.it/300'>
+            <a href='https://placeholder.com' target="_blank">'https://placeholder.com'</a>
+        </div>
     </section>
 
 
