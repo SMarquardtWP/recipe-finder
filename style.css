@@ -131,3 +131,42 @@ footer{
     font-size: 12px;
 }
 
+@media screen and (min-width: 720px) {
+    section{
+        max-width:500px;
+    }
+
+    .searchOptionContainer{
+        max-width:750px;
+        overflow:auto;
+        margin-top:20px;
+    }
+
+    form .searchOption {
+        margin-top:3px;
+        border-radius: 10px;
+        width:49%;
+    }
+
+    .right{
+        float:right;
+    }
+
+    .left{
+        float:left;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    section {
+        max-width:700px;
+    }
+
+    h4 {
+        font-size:24px;
+    }
+
+    a {
+        font-size:18px;
+    }
+}
