@@ -9,7 +9,6 @@ const BASE_URL = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/re
 
 //generates a list of all fetched recipes and displays them for the user
 function displayRecipe(jsonRecipe) {
-    console.log(jsonRecipe);
     if (jsonRecipe.code != 404) {
         $('.recipeResults').append(`
     <div class='recipe'>

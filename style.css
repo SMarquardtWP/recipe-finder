@@ -169,4 +169,8 @@ footer{
     a {
         font-size:18px;
     }
+
+    label, select, .queries{
+        width:30%;
+    }
 }
