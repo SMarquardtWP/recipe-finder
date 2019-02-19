@@ -24,7 +24,7 @@
 
     <form>
         <section class='generalQuery'>
-            <h3>Step 1: Enter your preferred cuisine and any terms you would like to search by, you can leave either
+            <h3>Step 1: Enter your preferred cuisine and any terms you would like to search by. You can leave either
                 field blank if you wish. </h3>
             <label>Cuisine:
                 <select class='cuisineTypes'>
@@ -61,7 +61,7 @@
         </section>
 
         <section class=searchOptionContainer>
-            <h3>Step 2: Select one of the three different search options below!</h3>
+            <h3>Step 2: Use one of the three different search options below!</h3>
             <div class='searchOption basicSearch left'>
                 <h3>Recipe Search</h3>
                 <p>This search will bring up a list of up to 10 popular recipes based on the criteria entered above.
@@ -82,12 +82,10 @@
                 <input type='text' name='ingredient5'>
                 <input type='text' name='ingredient6'><br>
                 <input type='submit' class='search2 searcher' value='Show Me The Recipes!'>
-                <div class='errorText'>
-                    Error Styling Sample;
+                <div class='ingErrorMessage errorText hidden'>
+                
                 </div>
             </div>
-
-            <div class='clearfix'></div>
 
             <div class='searchOption randomRecipe left'>
                 <h3>Anything At All</h3>
@@ -97,9 +95,9 @@
         </section>
     </form>
 
-    <p class='requestErrorMessage'></p>
+    <p class='requestErrorMessage errorText hidden'></p>
 
-    <section class='recipeResults'>
+    <section class='recipeResults hidden'>
 
     </section>
 

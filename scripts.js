@@ -9,6 +9,8 @@ const BASE_URL = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/re
 
 //generates a list of all fetched recipes and displays them for the user
 function displayRecipe(jsonRecipe) {
+    console.log(jsonRecipe);
+    $('.recipeResults').removeClass('hidden');
     if (jsonRecipe.code != 404) {
         $('.recipeResults').append(`
     <div class='recipe'>
@@ -40,10 +42,14 @@ function randomRecipe() {
 
 //accesses API to get information about different recipes based on advanced data received from user
 function advancedRecipes(cuisine, query, ingredients) {
-    if (ingredients == '')
-        $('.errorText').html('<p>Please input at least one ingredient</p>')
 
+
+    if (ingredients == ''){
+        $('.ingErrorMessage').html('<p>Please input at least one ingredient</p>');
+        $('.ingErrorMessage').removeClass('hidden');
+    }
     else {
+        $('.errorText').addClass('hidden');
         fetch(`${BASE_URL}/searchComplex?query=${query}&cuisine=${cuisine}&includeIngredients=${ingredients}&ranking=1&limitLicense=false`, SETTINGS)
             .then(response => {
                 if (response.ok) {
@@ -51,7 +57,16 @@ function advancedRecipes(cuisine, query, ingredients) {
                 }
                 throw new Error(response.statusText);
             })
-            .then(responseJson => findRecipeByID(responseJson, displayRecipe))
+            .then(responseJson => {
+                if (responseJson.results.length == 0) {
+                    $('.requestErrorMessage').text('No results were found with the parameters given, please try a different search.');
+                    $('.requestErrorMessage').removeClass('hidden');
+                }
+                else {
+                    $('.requestErrorMessage').addClass('hidden');
+                    findRecipeByID(responseJson, displayRecipe);
+                }
+            })
             .catch(err => {
                 $('.requestErrorMessage').text(`Sorry, something seems to have gone wrong: $err.message}`);
             });
@@ -67,7 +82,17 @@ function basicRecipes(cuisine, query) {
             }
             throw new Error(response.statusText);
         })
-        .then(responseJson => findRecipeByID(responseJson, displayRecipe))
+        .then(responseJson => {
+            console.log(responseJson);
+            if (responseJson.results.length == 0) {
+                $('.requestErrorMessage').text('No results were found with the parameters given, please try a different search.');
+                $('.requestErrorMessage').removeClass('hidden');
+            }
+            else {
+                findRecipeByID(responseJson, displayRecipe);
+                $('.requestErrorMessage').addClass('hidden');
+            }
+        })
         .catch(err => {
             $('.requestErrorMessage').text(`Sorry, something seems to have gone wrong: $err.message}`);
         });
