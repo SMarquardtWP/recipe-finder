@@ -106,7 +106,7 @@ img {
     background-color:rgb(90, 162, 225);
     border-radius: 5px;
     font-family:'Capriola';
-    font-size:16px;
+    font-size:15px;
     height: 40px;
     width: 70%;
     border: 3px outset darkslateblue;
@@ -131,7 +131,7 @@ img {
 footer{
     margin-top: 5px;
     margin-left: 5px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 @media screen and (min-width: 720px) {
