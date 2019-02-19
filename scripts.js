@@ -25,7 +25,7 @@ function displayRecipe(jsonRecipe) {
 /*-------------------Recipe retrieval functions -------------------------*/
 /*-----------------------------------------------------------------------*/
 
-//accesses API to retrieve a single random recipe for user. Only filters by cuisine
+//accesses API to retrieve a single random recipe for user, then calls for it to be displayed
 function randomRecipe() {
     fetch(`${BASE_URL}/random?number=1`, SETTINGS)
         .then(response => {
@@ -40,7 +40,7 @@ function randomRecipe() {
         });
 }
 
-//accesses API to get information about different recipes based on advanced data received from user
+//accesses API to get information about different recipes based on advanced data received from user, displays error message if there is an issue handling the request, displays notification if no results were found with specified search terms
 function advancedRecipes(cuisine, query, ingredients) {
 
 
@@ -73,7 +73,7 @@ function advancedRecipes(cuisine, query, ingredients) {
     }
 }
 
-//accesses API to get information about different recipes based on basic data received from user
+//accesses API to get information about different recipes based on basic data received from user, displays error message if there is an issue handling the request, displays notification if no results were found with specified search terms
 function basicRecipes(cuisine, query) {
     fetch(`${BASE_URL}/search?cuisine=${cuisine}&number=10&offset=0&query=${query}`, SETTINGS)
         .then(response => {
@@ -132,6 +132,7 @@ function formatIngredients() {
     return ingredientsList;
 }
 
+//below functions watch for form submissions
 function watchBasic() {
     $('.search1').click(event => {
         event.preventDefault();
