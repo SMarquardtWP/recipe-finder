@@ -2,7 +2,7 @@
 
 const SETTINGS = {
     headers: {
-        'X-RapidAPI-Key': '96256b7920msh83769b864ea6c5ep1396eejsn338f4bd8a887'
+        'X-RapidAPI-Key': 'SPOONACULAR_KEY'
     }
 };
 const BASE_URL = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes';
