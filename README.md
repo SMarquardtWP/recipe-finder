@@ -1,10 +1,5 @@
 # Recipe Finder
 
-
-## Demo
-- [Live Demo](https://smarquardtwp.github.io/recipe-finder/)
-
-
 ## Screenshots
 
 ### _Landing Page_
